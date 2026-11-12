@@ -10,6 +10,6 @@ class Person extends Model
     use HasFactory;
     protected $table = 'persons';
     protected $fillable = [
-        'name', 'surname', 'age'
+        'name', 'surname', 'age', 'img'
     ];
 }

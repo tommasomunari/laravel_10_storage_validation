@@ -26,6 +26,7 @@
     width: 100%;
     position: fixed;
     top: 0px;
+    z-index : 1030;
 }
 
 .div-custom{
@@ -46,3 +47,23 @@
     align-items: center;
 }
 
+.cards-custom{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card-custom{
+    height: 200px;
+    width: 20%;
+    background-color: pink;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-card{
+    height: 120px;
+    width: 120px;
+}

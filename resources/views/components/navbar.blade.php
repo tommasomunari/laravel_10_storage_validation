@@ -12,6 +12,12 @@
         <li class="nav-item">
           <a class="nav-link" href="{{route('contactUs')}}">Contattaci</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{route('createPerson')}}">Iscriviti</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{route('allPerson')}}">Tutti i nostri iscritti</a>
+        </li>
       </ul>
     </div>
   </div>

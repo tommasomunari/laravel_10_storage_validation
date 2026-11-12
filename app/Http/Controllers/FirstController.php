@@ -6,6 +6,8 @@ use App\Mail\ContactEmail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Models\Person;
+use App\Http\Requests\FormPersonRequest;
+
 
 
 class FirstController extends Controller
@@ -36,12 +38,20 @@ class FirstController extends Controller
         return view ('person');
     }
 
-    public function store(Request $request){
+    public function store(FormPersonRequest $request){
+        $img= null;
+        if($request->file('img')){
+            $img = $request->file('img')->store('img', 'public');
+        }
+
         $person = Person::create([
             'name' => $request->name,
             'surname' => $request->surname,
             'age' => $request->age,
+            'img' => $img
         ]);
+
+
         return redirect()->route('allPerson');
     }
 
